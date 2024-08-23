@@ -45,8 +45,8 @@ export const fetchNewsDataArticles = async (
         apikey: NEWS_DATA_API_KEY,
         q: query,
         category: filters.category || undefined,
-        language: "en", // Assuming English language for consistency
-        // NewsData API doesn't have a direct date filter, so we'll filter results client-side if needed
+        language: "en", 
+        
       },
     });
     return response.data.results;
@@ -88,7 +88,7 @@ export const fetchNewsAPIArticles = async (
         apiKey: NEWS_API_KEY,
         language: "en",
         from: fromDate,
-        to: today.toISOString().split("T")[0], // Set 'to' as today to ensure we don't query future dates
+        to: today.toISOString().split("T")[0],
         pageSize: 10,
       },
     });
@@ -102,7 +102,7 @@ export const fetchNewsAPIArticles = async (
     } else {
       console.error("Error fetching NewsAPI articles:", error);
     }
-    throw error; // Re-throw the error to be handled by the calling function
+    throw error; 
   }
 };
 
@@ -110,7 +110,7 @@ export const fetchLatestNews = async (): Promise<Article[]> => {
   try {
     const response = await axios.get(`https://newsapi.org/v2/top-headlines`, {
       params: {
-        country: "us", // Assuming US top headlines for latest news
+        country: "us", 
         apiKey: NEWS_API_KEY,
         pageSize: 10,
       },
@@ -122,7 +122,6 @@ export const fetchLatestNews = async (): Promise<Article[]> => {
   }
 };
 
-// Helper function to combine and deduplicate articles
 export const combineAndDeduplicateArticles = (
   articles: (Article | NYTArticle | NewsDataArticle)[]
 ): (Article | NYTArticle | NewsDataArticle)[] => {
