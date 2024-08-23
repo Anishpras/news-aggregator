@@ -24,7 +24,6 @@ This project is hosted on GitHub:
 - React Query for efficient server state management
 - Axios for HTTP requests
 - React Router for navigation
-- Jest and React Testing Library for comprehensive testing
 
 ## Prerequisites
 
@@ -118,7 +117,6 @@ news-aggregator/
 ├── tsconfig.json        # TypeScript configuration
 ├── tailwind.config.js   # Tailwind CSS configuration
 ├── vite.config.ts       # Vite configuration
-├── jest.config.js       # Jest configuration
 └── README.md            # Project documentation
 ```
 
@@ -131,11 +129,6 @@ If you encounter any issues:
 2. Check for any console errors in the browser developer tools
 3. Verify that all API keys are valid and have the necessary permissions
 
-If problems persist, please open an issue in the GitHub repository with a detailed description of the problem and steps to reproduce it.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Contact
 
